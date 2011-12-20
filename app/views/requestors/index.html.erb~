@@ -1,0 +1,7 @@
+<h2><%=l(:label_administration)%></h2>
+
+<div id="admin-index">
+  <%= render :partial => 'translate_form'
+</div>
+
+<% html_title(l(:label_administration)) -%>
