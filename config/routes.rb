@@ -1,10 +1,16 @@
 Translation::Application.routes.draw do
-  devise_for :workers
+  devise_for :requestors do# , :controllers => { :sessions => "requestors/sessions" }
+    root :to => "requestors#index"
+  end
+  devise_for :workers do # ,:controllers => { :sessions => "workers/sessions" }
+     root :to => "workers#index"
+    end
+  devise_for :workers, :path => "usuarios", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  root :to => "home#index"
+
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
