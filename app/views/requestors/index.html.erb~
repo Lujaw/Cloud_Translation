@@ -1,7 +1,5 @@
-<h2><%=l(:label_administration)%></h2>
+<h2><Cloud Translation | CLient></h2>
 
-<div id="admin-index">
+<div id="client-index">
   <%= render :partial => 'translate_form'
 </div>
-
-<% html_title(l(:label_administration)) -%>

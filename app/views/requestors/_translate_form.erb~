@@ -1,5 +1,5 @@
 <div class="nodata">
- <%= semantic_form_for @translation_text do |f| %>
+ <%= semantic_form_for translation_text do |f| %>
     <%= f.inputs %>
     <%= f.buttons %>
   <% end %>
