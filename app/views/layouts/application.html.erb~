@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Translation</title>
-  <%= stylesheet_link_tag    "application" %>
+  <title>Cloud Translation</title>
+  <%= stylesheet_link_tag    "application","formtastic","formtastic_changes" :cache => "base"%>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>

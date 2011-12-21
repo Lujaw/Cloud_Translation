@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111221145812) do
+ActiveRecord::Schema.define(:version => 20111221162403) do
 
   create_table "requestors", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -31,6 +31,14 @@ ActiveRecord::Schema.define(:version => 20111221145812) do
 
   add_index "requestors", ["email"], :name => "index_requestors_on_email", :unique => true
   add_index "requestors", ["reset_password_token"], :name => "index_requestors_on_reset_password_token", :unique => true
+
+  create_table "tasks", :force => true do |t|
+    t.text     "content"
+    t.float    "reward"
+    t.integer  "work_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "translation_texts", :force => true do |t|
     t.string   "from"
